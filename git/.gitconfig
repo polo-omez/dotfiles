@@ -1,3 +1,5 @@
 [user]
-	name = omez
+	name = polo-omez
 	email = pablogomez0904@gmail.com
+[credential]
+	helper = store
