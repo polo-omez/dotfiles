@@ -1,0 +1,31 @@
+* {
+    color: #c0bfbd;
+    background: #151416;
+    border: none;
+    border-radius: 10px;
+}
+
+.monitor {
+    padding: 10px 6px;
+}
+
+.workspace {
+    margin: 0 4px;
+}
+
+.index {
+    color: #A27474;
+    background: #151416;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.client {
+    border-radius: var(--border-radius);
+    background-color: var(--background);
+    border: 3px solid var(--border-color);
+}
+
+.client_active {
+    border: 3px solid #FAE8D2;
+}
