@@ -104,5 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias backup="~/dotfiles/scripts/.config/scripts/dotfiles-backup.sh"
 
+export ANI_CLI_PLAYER=mpv-single
+export ANI_CLI_QUALITY=best
+
 fastfetch
 
