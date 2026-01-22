@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias backup="~/dotfiles/scripts/.config/scripts/dotfiles-backup.sh"
+alias v=nvim
 
 export ANI_CLI_PLAYER=mpv-single
 export ANI_CLI_QUALITY=best
