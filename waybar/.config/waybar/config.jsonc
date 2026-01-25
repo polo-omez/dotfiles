@@ -14,6 +14,7 @@
         "custom/media"
     ],
     "modules-center": [
+        "clock",
         "hyprland/window"
     ],
     "modules-right": [
@@ -25,7 +26,6 @@
         "cpu",
         "memory",
         "temperature",
-        "clock",
         "tray",
         "custom/power"
     ],
