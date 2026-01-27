@@ -1,0 +1,30 @@
+1769104509820	Sync.LogManager	DEBUG	Flushing file log
+1769104509822	Sync.LogManager	DEBUG	Log cleanup threshold time: 1768240509822
+1769104509824	Sync.LogManager	DEBUG	Done deleting files.
+1769104511179	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1769104522970	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change: scheduling a quick-write in 5000ms
+1769104524792	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but a quick-write is already scheduled
+1769104525666	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but a quick-write is already scheduled
+1769104527970	Sync.Engine.Tabs	INFO	Can't do a quick-sync due to the service status: <Status: login: success.login, service: error.sync.failed, sync: error.login.reason.network>
+1769104528682	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change: scheduling a quick-write in 5000ms
+1769104529074	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1769104532013	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1769104532013	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1769104532015	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1769104532016	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1769104533682	Sync.Engine.Tabs	INFO	Can't do a quick-sync due to the service status: <Status: login: success.login, service: error.sync.failed, sync: error.login.reason.network>
+1769104534067	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1769104534067	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1769104534069	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1769104534070	Sync.Service	DEBUG	User-Agent: Zen/1.17.15b (Linux x86_64) FxSync/1.148.0.20251220120600.desktop
+1769104534070	Sync.Service	INFO	Starting sync at 2026-01-22 18:55:34 in browser session -g7HuJrgwjcC
+1769104534071	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1769104534072	Sync.Status	INFO	Resetting Status.
+1769104534072	Sync.Status	DEBUG	Status.service: error.sync.failed => success.status_ok
+1769104534072	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1769104534074	Sync.Resource	WARN	GET request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/info/collections failed: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1769104534074	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1769104534074	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1769104534075	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1769104534075	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1769104534075	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
