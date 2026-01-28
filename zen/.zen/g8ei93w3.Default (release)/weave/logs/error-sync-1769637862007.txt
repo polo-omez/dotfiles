@@ -1,0 +1,102 @@
+1769637529556	Sync.LogManager	DEBUG	Flushing file log
+1769637529556	Sync.LogManager	DEBUG	Log cleanup threshold time: 1768773529556
+1769637529560	Sync.LogManager	DEBUG	Done deleting files.
+1769637860968	Sync.Service	DEBUG	User-Agent: Zen/1.18.2b (Linux x86_64) FxSync/1.149.0.20260127105552.desktop
+1769637860968	Sync.Service	INFO	Starting sync at 2026-01-28 23:04:20 in browser session Q9YLaWWXJA2C
+1769637860968	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1769637860970	Sync.Status	INFO	Resetting Status.
+1769637860971	Sync.Status	DEBUG	Status.service: error.sync.failed_partial => success.status_ok
+1769637860971	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1769637860971	FirefoxAccounts	DEBUG	getOAuthToken enter
+1769637860972	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1769637860972	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1769637860972	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1769637861171	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/info/collections
+1769637861171	Sync.Service	DEBUG	Fetching server configuration: https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/info/configuration
+1769637861177	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile 304
+1769637861348	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change: scheduling a quick-write in 5000ms
+1769637861385	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/info/configuration
+1769637861385	Sync.Service	DEBUG	Fetching global metadata record
+1769637861385	Sync.Service	DEBUG	Weave Version: 1.149.0 Local Storage: 5 Remote Storage: 5
+1769637861385	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1769637861385	Sync.Service	INFO	Testing info/collections: {"crypto":1575814971.5,"addons":1769549956.92,"workspaces":1769272503.28,"bookmarks":1769549938.82,"extension-storage":1769592989.32,"history":1769636675.59,"meta":1768822942.91,"tabs":1769637529.23,"prefs":1769549956.39,"passwords":1769632430.63,"forms":1769550389.45,"clients":1769627231.9}
+1769637861385	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1575814971.5
+1769637861385	Sync.Synchronizer	DEBUG	Refreshing client list.
+1769637861386	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1769637861386	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1769637861551	Sync.Collection	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/storage/clients?full=1&limit=1000
+1769637861553	Sync.Engine.Clients	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 5 reconciled.
+1769637861553	Sync.Engine.Clients	DEBUG	Refreshing the known stale clients list
+1769637861553	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1769637861553	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1769637861554	Sync.Engine.Clients	INFO	Hiding stale client f68TLfTKDuAa - in known stale clients list
+1769637861554	Sync.Engine.Clients	INFO	Hiding stale client -BtHdjMyf-Qd - in known stale clients list
+1769637861554	Sync.Engine.Clients	INFO	Uploading 0 outgoing records
+1769637861554	Sync.Synchronizer	INFO	Updating enabled engines: 3 clients.
+1769637861555	Sync.Synchronizer	INFO	Syncing all enabled engines.
+1769637861555	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637861555	Sync.Engine.Prefs	INFO	Uploading 0 outgoing records
+1769637861568	Sync.Engine.Passwords	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637861568	Sync.Engine.Passwords	INFO	Uploading 0 outgoing records
+1769637861570	Sync.Engine.Tabs	INFO	update_local_state has 17 tab entries
+1769637861570	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1769637861570	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1769637861573	Sync.Engine.Tabs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637861573	Sync.Engine.Tabs	INFO	prepare_local_tabs_for_upload found 17 tabs
+1769637861574	Sync.Engine.Tabs	INFO	Uploading 1 outgoing records
+1769637861574	Sync.Engine.Tabs	INFO	Posting 1 records of 5547 bytes with batch=true
+1769637861575	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1769637861575	Sync.Collection	DEBUG	POST Length: 5547
+1769637861806	Sync.Collection	DEBUG	POST success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/storage/tabs?batch=true&commit=true
+1769637861807	Sync.Engine.Tabs	INFO	sync uploaded 1 records
+1769637861807	Sync.Engine.Tabs	DEBUG	Updating last sync to 1769637861.68
+1769637861812	Sync.Engine.Tabs	DEBUG	Updating last sync to 1769637861.68
+1769637861815	Sync.Engine.Bookmarks	DEBUG	Checking if server sync ID xvpuII_s1dTw matches existing
+1769637861816	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1769637861999	Sync.Collection	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/233787478/storage/bookmarks?newer=1768849426.39&full=1&sort=oldest&limit=1000
+1769637862002	Sync.Engine.Bookmarks	WARN	Got exception, aborting processIncoming: Error: Error(s) encountered during statement execution: UNIQUE constraint failed: structure.parentGuid, structure.guid(resource://gre/modules/Sqlite.sys.mjs:1095:25) JS Stack trace: handleCompletion@Sqlite.sys.mjs:1095:25
+1769637862002	Sync.Engine.Bookmarks.BookmarkSyncUtils	DEBUG	pushChanges: Processed change records: {"weak":0,"skipped":0,"updated":0}
+1769637862002	Sync.Status	DEBUG	Status for engine bookmarks: error.engine.reason.unknown_fail
+1769637862002	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed_partial
+1769637862002	Sync.ErrorHandler	DEBUG	bookmarks failed: Error: Error(s) encountered during statement execution: UNIQUE constraint failed: structure.parentGuid, structure.guid(resource://gre/modules/Sqlite.sys.mjs:1095:25) JS Stack trace: handleCompletion@Sqlite.sys.mjs:1095:25
+1769637862003	Sync.Engine.Addons	DEBUG	Refreshing reconciler state
+1769637862003	Sync.AddonsReconciler	INFO	Refreshing global state from AddonManager.
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web Compatibility Interventions (version=148.0.20251209.161422, id=webcompat@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Innovator – Bold (version=2.1, id=innovator-bold-colorway@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Expressionist – Bold (version=2.1, id=expressionist-bold-colorway@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Bonjourr · Minimalist Startpage (version=22.0.0, id={4f391a9e-8717-4ba6-a5b1-488a34931fcb})
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Gruvbox Material Dark Soft (version=2.0, id={21ab01a8-2464-4824-bccb-6db15659347e})
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Data Leak Blocker (version=144.0.0, id=data-leak-blocker@mozilla.com)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Form Autofill (version=1.0.1, id=formautofill@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon IPP Activator (version=0.1, id=ipp-activator@mozilla.com)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon New Tab (version=147.1.0, id=newtab@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Picture-In-Picture (version=1.0.0, id=pictureinpicture@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Add-ons Search Detection (version=3.0.0, id=addons-search-detection@mozilla.com)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon System theme — auto (version=1.4.2, id=default-theme@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Light (version=1.3.4, id=firefox-compact-light@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Dark (version=1.3.4, id=firefox-compact-dark@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Alpenglow (version=1.5.1, id=firefox-alpenglow@mozilla.org)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon AdGuard AdBlocker (version=5.2.800.2, id=adguardadblocker@adguard.com)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon OpenH264 Video Codec provided by Cisco Systems, Inc. (version=2.6.0, id=gmp-gmpopenh264)
+1769637862003	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Widevine Content Decryption Module provided by Google Inc. (version=4.10.2934.0, id=gmp-widevinecdm)
+1769637862003	Sync.AddonsReconciler	INFO	Saving reconciler state to file: addonsreconciler
+1769637862004	Sync.Engine.Addons	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637862004	Sync.Engine.Addons	INFO	Uploading 0 outgoing records
+1769637862004	Sync.Engine.Forms	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637862004	Sync.Engine.Forms	INFO	Uploading 0 outgoing records
+1769637862004	Sync.Engine.History	DEBUG	Checking if server sync ID 4r4W8kDtxhGL matches existing
+1769637862005	Sync.Engine.History	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637862005	Sync.Engine.History	INFO	Uploading 0 outgoing records
+1769637862005	Sync.Engine.Extension-Storage	DEBUG	Initializing sync temp tables
+1769637862005	Sync.Engine.Extension-Storage	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1769637862005	Sync.Engine.Extension-Storage	DEBUG	get_outgoing found 0 items
+1769637862005	Sync.Engine.Extension-Storage	INFO	Uploading 0 outgoing records
+1769637862005	Sync.Engine.Extension-Storage	DEBUG	Initializing sync temp tables
+1769637862006	Sync.Doctor	INFO	Skipping consultation: telemetry reporting is disabled
+1769637862006	Sync.Synchronizer	INFO	Sync completed at 2026-01-28 23:04:22 after 1.04 secs.
+1769637862006	Sync.Declined	DEBUG	Handling remote declined: []
+1769637862006	Sync.Declined	DEBUG	Handling local declined: []
+1769637862006	Sync.Declined	DEBUG	Declined changed? false
+1769637862006	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1769637862006	Sync.ErrorHandler	ERROR	Some engines did not sync correctly.
+1769637862006	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
