@@ -5,10 +5,20 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local lint = require("lint")
+			lint.linters.pylint.args = {
+				"--format=json",
+				"--stdin",
+				"--stdin-path",
+				function()
+					return vim.api.nvim_buf_get_name(0)
+				end,
+				"--load-plugins=pylint_django",
+			}
 			lint.linters_by_ft = {
 				markdown = { "markdownlint" },
 				python = { "pylint" },
 				--lua = { "luacheck" },
+				htmldjango = { "djlint" },
 			}
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,
