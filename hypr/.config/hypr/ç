@@ -4,8 +4,8 @@
 $mainMonitor = DP-2
 $secondaryMonitor = HDMI-A-2
 
-monitor = $mainMonitor, 2560x1440@144, auto, auto
-monitor = $secondaryMonitor, 1920x1080@100, auto, auto
+monitor = $mainMonitor, 2560x1440@144, auto, 1
+monitor = $secondaryMonitor, 1920x1080@100, auto, 1
 
 # ASSING WORKSPACE TO MONITORS
 
