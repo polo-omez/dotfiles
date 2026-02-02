@@ -106,14 +106,8 @@ alias backup="~/dotfiles/scripts/.config/scripts/dotfiles-backup.sh"
 alias vim=nvim
 alias anime="ani-cli -c"
 
-export ANI_CLI_PLAYER=mpv-single
+export ANI_CLI_PLAYER=mpv
 export ANI_CLI_QUALITY=best
-
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/sbin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/sbin/python3 '
-export PROJECT_HOME=$HOME/Devel
-source /usr/sbin/virtualenvwrapper.sh
 
 fastfetch
 

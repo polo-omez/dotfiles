@@ -6,8 +6,8 @@ return {
 		vim.opt.termguicolors = true
 		require("bufferline").setup({})
 		vim.keymap.set("n", "<Leader><Tab>", "<cmd>e #<cr>", { desc = "Cycle tab" })
-		vim.keymap.set("n", "<C-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous tab" })
-		vim.keymap.set("n", "<C-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next tab" })
+		vim.keymap.set("n", "<C-p>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous tab" })
+		vim.keymap.set("n", "<C-n>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next tab" })
 		vim.keymap.set("n", "<C-x>", "<cmd>bdelete<cr>", { desc = "Close tab" })
 	end,
 }
