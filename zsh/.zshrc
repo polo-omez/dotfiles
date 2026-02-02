@@ -103,6 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias backup="~/dotfiles/scripts/.config/scripts/dotfiles-backup.sh"
+
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
 alias vim=nvim
 alias anime="ani-cli -c"
 
