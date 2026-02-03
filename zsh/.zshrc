@@ -110,6 +110,8 @@ eval "$(tmuxifier init -)"
 alias vim=nvim
 alias anime="ani-cli -c"
 
+export EDITOR=nvim
+
 export ANI_CLI_PLAYER=mpv
 export ANI_CLI_QUALITY=best
 
