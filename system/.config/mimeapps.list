@@ -12,6 +12,7 @@ x-scheme-handler/http=zen.desktop;
 x-scheme-handler/https=zen.desktop;
 application/zip=org.gnome.FileRoller.desktop;
 application/schema+json=vscodium.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
