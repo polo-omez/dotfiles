@@ -1,0 +1,14 @@
+# ~/.config/yazi/keymap.toml
+[[mgr.prepend_keymap]]
+on   = [ "c", "z" ]
+run  = 'shell "cd \"$(dirname \"$1\")\" && zip -r \"$(basename \"$1\").zip\" \"$(basename \"$1\")\"" --block'
+#run  = 'shell "echo Vas a comprimir: $1 y se llamará ${1##*/}.zip; read" --block'
+desc = "Compress to .zip"
+[[mgr.prepend_keymap]]
+on   = [ "c", "t" ]
+run  = 'shell "cd \"$(dirname \"$1\")\" && tar -czvf \"$(basename \"$1\").tar.gz\" \"$(basename \"$1\")\"" --block'
+desc = "Compress to .tar.gz"
+[[mgr.prepend_keymap]]
+on   = [ "c", "u" ]
+run  = 'shell "if [[ \"$1\" == *.zip ]]; then unzip \"$1\"; elif [[ \"$1\" == *.tar.gz ]]; then tar -xzvf \"$1\"; else echo \"Formato no soportado\"; fi" --block'
+desc = "Uncompress file"
