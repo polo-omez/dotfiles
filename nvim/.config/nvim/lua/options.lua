@@ -11,6 +11,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 vim.opt.nu = true -- enable line numbers
 vim.opt.relativenumber = true -- enable relative lines
+vim.opt.scrolloff = 10 -- forzar 10 lineas siempre por debajo del cursor
 -- Sincronizar portapapeles de sistema con el de nvim
 -- Esto permite que 'y' copie al sistema y 'p' pegue desde él
 vim.opt.clipboard = "unnamedplus"

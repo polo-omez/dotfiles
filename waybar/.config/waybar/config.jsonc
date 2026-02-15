@@ -1,171 +1,261 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 36, // Un poco más alto para que los bordes redondeados respiren
-    "spacing": 6,
-    "output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
-    
-    "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media",
-        "mpris"
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "mpd",
-        "pulseaudio",
-        "network",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "battery",
-        "power-profiles-daemon",
-        "custom/power"
-    ],
+  "layer": "top",
+  "position": "top",
+  "height": 36, // Un poco más alto para que los bordes redondeados respiren
+  "spacing": 6,
+  "output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
 
-    // --- CONFIGURACIÓN DE MÓDULOS ---
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/mode",
+    "hyprland/scratchpad",
+    "group/media",
+    "custom/media",
+  ],
+  "modules-center": [
+    "clock",
+  ],
+  "modules-right": [
+    "mpd",
+    "group/audio",
+    "pulseaudio#microphone",
+    "network",
+    "group/computadora",
+    "memory",
+    "temperature",
+    "backlight",
+    "battery",
+    "power-profiles-daemon",
+    "custom/power"
+  ],
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "format": "{name}", // Quitamos iconos para hacerlo más limpio/minimalista
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
+  // --- CONFIGURACIÓN DE MÓDULOS ---
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}", // Quitamos iconos para hacerlo más limpio/minimalista
+    "format-icons": {
+       
+      "1": "󰧄",
+      "2": "󰁞",
+      "3": "󰧆",
+      "4": "󰁎",
+      "5": "󰁄",
+      "6": "󰁕",
+      "7": "󰦸",
+      "8": "󰁆",
+      "9": "󰦺",
+      "10": "󰧄",
+      "11": "󰁞",
+      "12": "󰧆",
+      "13": "󰁎",
+      "14": "󰁄",
+      "15": "󰁕",
+      "16": "󰦸",
+      "17": "󰁆",
+      "18": "󰦺",
+      "default": "◯",
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+    "sort-by": "number",
+    "all-outputs": false,
+  },
+  "hyprland/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "custom/cava": {
+    // Explicación: sed reemplaza cada número (0-7) por su barrita correspondiente
+    "exec": "cava -p ~/.config/cava/config_waybar | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'",
+    "tail": true,
+    "tooltip": false,
+    "on-click": "playerctl play-pause"
+  },
+  "hyprland/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+  "mpd": {
+    "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}Stopped ",
+    "interval": 5,
+    "consume-icons": {"on": " "},
+    "random-icons": {"off": "<span color=\"#f53c3c\"></span> ","on": " "},
+    "repeat-icons": {"on": " "},
+    "single-icons": {"on": "1 "},
+    "state-icons": {"paused": "","playing": ""},
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+  "mpris": {
+    "format-paused": "<b>{title}</b>",
+    "format": "<i>{title}</i>",
+    "format-stopped": "   ...   ",
+    "player-icons": {
+      "default": "",
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
+    "status-icons": {
+      "paused": ""
     },
-    "mpd": {
-        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}) ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}Stopped ",
-        "interval": 5,
-        "consume-icons": {"on": " "},
-        "random-icons": {"off": "<span color=\"#f53c3c\"></span> ","on": " "},
-        "repeat-icons": {"on": " "},
-        "single-icons": {"on": "1 "},
-        "state-icons": {"paused": "","playing": ""},
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+    "max-length": 30
+  },
+  "custom/mpris-prev": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "playerctl previous"
+  },
+  "custom/mpris-next": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "playerctl next"
+  }, 
+  "mpris#pause": {
+    "format-paused": "",
+    "format": "",
+  }, 
+  "group/media": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 400,
+        "children-class": "mpris-controls",
+        "transition-left-to-right": false
     },
-   "mpris": {
-        "format-paused": "{player_icon} {title}",
-        "format": " <i>{title}</i>",
-        "player-icons": {
-            "default": "",
-        },
-        "status-icons": {
-            "paused": ""
-        },
-        "max-length": 30
+    // El orden importa: Primero el texto (mpris), luego los botones ocultos
+    "modules": ["mpris", "custom/mpris-prev", "mpris#pause", "custom/mpris-next"]
+  },
+
+
+
+  "clock": {
+    "format": "  {:%H:%M   %d/%m}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "group/computadora": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "cpu",
+      "transition-left-to-right": false
     },
-    "clock": {
-        "format": "  {:%H:%M   %d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+    "modules": ["cpu", "cpu#monitor"]
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "cpu#monitor": {
+    "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+    "format-icons": [
+      "<span color='#7dcd61'>▁</span>", // green
+      "<span color='#7dcd61'>▂</span>", // blue
+      "<span color='#64a44e'>▃</span>", // white
+      "<span color='#d8e26d'>▄</span>", // white
+      "<span color='#d79921'>▅</span>", // yellow
+      "<span color='#d79921'>▆</span>", // yellow
+      "<span color='#fe8019'>▇</span>", // orange
+      "<span color='#cc241d'>█</span>" // red
+    ],
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "CPU Frequency: {avg_frequency} GHz",
+    "on-click": "alacritty -e btop"
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+  "backlight": {
+    "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-    "network": {
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "Wired ",
-        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-                   
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "pavucontrol"
-    },
-                                     
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
-    },
-    "custom/power": {
-        "format": "⏻ ",
-        "tooltip": false,
-        "on-click": "wlogout --protocol layer-shell -b 2"
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
+  },
+  "network": {
+    "format-wifi": "{signalStrength}% ",
+    "format-ethernet": "Wired ",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "audio",
+      "transition-left-to-right": false
+    },
+    "modules": ["pulseaudio", "custom/cava", "pulseaudio/slider"]
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },              
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} ",
+    "format-bluetooth": "{volume}% {icon}}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio#microphone": {
+
+    "format": "{format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "wlogout --protocol layer-shell -b 2"
+  }
 }
 

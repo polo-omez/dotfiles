@@ -38,20 +38,29 @@ tooltip label {
 #temperature,
 #backlight,
 #battery,
+#custom-cava,
+#pulseaudio-slider,
+#custom-mpris-next,
+#custom-mpris-prev,
+#mpris#pause,
 #power-profiles-daemon,
 #custom-power {
-    background-color: #58554e; /* Tu color crema */
-    color: #ebe2cb;            /* Texto negro */
+    background-color: #58554e; /* Fondo */
+    color: #ebe2cb;            /* Texto */
     
-    border: 2px solid #000000; /* Borde negro sólido */
+    border: 3px solid #000000; /* Borde negro sólido */
+    border-left: 2px;
+    border-right: 2px;
+    border-top: 2px;
     
     padding: 0 10px;
-    margin: 4px 3px;
-    border-radius: 6px;        /* Bordes un poco más cuadrados */
+    margin: 4px 3px 2px 2px;
+    border-radius: 8px 8px 8px 8px;        /* Bordes un poco más cuadrados */
     
     /* Sombra sólida tipo "Pop Art" */
-    box-shadow: 2px 2px 0px #000000; 
+    box-shadow: 0px 3px 0px #000000; 
 }
+
 
 /* Efecto al pasar el ratón (CORREGIDO: Sin transform) */
 #clock:hover,
@@ -65,6 +74,9 @@ tooltip label {
 #memory:hover,
 #backlight:hover,
 #battery:hover,
+#custom-mpris-prev:hover,
+#custom-mpris-next:hover, 
+#mpris#pause,
 #power-profiles-daemon,
 #custom-power:hover {
     background-color: #797771; /* Se ilumina a blanco */
@@ -95,6 +107,29 @@ tooltip label {
     color: #eb4d4b;
 }
 
+
+#pulseaudio-slider{
+   margin-right: 0;
+}
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  background: transparent;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 100px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#pulseaudio-slider highlight {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 4px;
+  background: #ebe2cb;
+}
+
 /* --- Hardware Unificado (CPU/Memoria/Temp) --- */
 /* Quitamos márgenes internos para que parezcan un bloque */
 
@@ -109,12 +144,23 @@ tooltip label {
     border-radius: 0;
 }
 
+#pulseaudio{
+    margin-left: 0;
+}
+
+#pulseaudio#microphone{
+    margin-right: 0;
+}
+
 #temperature {
     margin-left: 0;
     border-radius: 0 6px 6px 0;
     color: #433e33;
     background-color: #ff9900;
 }
+
+
+
 
 /* Botón de apagado invertido */
 #custom-power {

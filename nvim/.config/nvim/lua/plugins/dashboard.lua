@@ -31,9 +31,11 @@ return {
                     -- Usamos 'Telescope live_grep' para buscar texto
                     { action = 'Telescope live_grep',                            desc = " Find Text",       icon = " ", key = "g" },
                     -- Usamos 'persistence' directamente si lo tienes instalado
-                    { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
+                   -- { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
                     -- Abrimos el gestor Lazy estándar en lugar de LazyExtras
                     { action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
+                    -- Abrir mason
+                    { action = "Mason",                                           desc = " Mason",            icon = " ", key = "m" },
                     -- Salir de Neovim
                     { action = function() vim.api.nvim_input("<cmd>qa<cr>") end, desc = " Quit",            icon = " ", key = "q" },
                 },

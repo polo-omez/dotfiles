@@ -1,0 +1,17 @@
+[general]
+# Número de barras (hazlo bajo para que sea "mini")
+bars = 12
+# Fotogramas por segundo (60 es suave, bájalo si consume mucha CPU)
+framerate = 145
+
+[input]
+# Si usas pipewire (lo normal en Hyprland), pon 'pipewire'. Si no, 'pulse'.
+method = pipewire
+source = auto
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7
+bar_delimiter = 59
