@@ -1,26 +1,26 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: #000000;
+  background: transparent;
+  color: #000000;
 }
 
 tooltip {
-    background: #f1e3bb;
-    border-radius: 8px;
-    border: 2px solid #000000;
-    box-shadow: 2px 2px 0px #000000;
+  background: #f1e3bb;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
 }
 
 tooltip label {
-    color: #000000;
+  color: #000000;
 }
 
 /* --- ESTILO DE MÓDULOS (LA CÁPSULA CREMA CON BORDE) --- */
@@ -29,7 +29,7 @@ tooltip label {
 #clock,
 #mpd,
 #custom-media,
-#mpris,  
+#mpris,
 #idle_inhibitor,
 #pulseaudio,
 #network,
@@ -45,20 +45,24 @@ tooltip label {
 #mpris#pause,
 #power-profiles-daemon,
 #custom-power {
-    background-color: #58554e; /* Fondo */
-    color: #ebe2cb;            /* Texto */
-    
-    border: 3px solid #000000; /* Borde negro sólido */
-    border-left: 2px;
-    border-right: 2px;
-    border-top: 2px;
-    
-    padding: 0 10px;
-    margin: 4px 3px 2px 2px;
-    border-radius: 8px 8px 8px 8px;        /* Bordes un poco más cuadrados */
-    
-    /* Sombra sólida tipo "Pop Art" */
-    box-shadow: 0px 3px 0px #000000; 
+  background-color: #58554e;
+  /* Fondo */
+  color: #ebe2cb;
+  /* Texto */
+
+  border: 3px solid #000000;
+  /* Borde negro sólido */
+  border-left: 2px;
+  border-right: 2px;
+  border-top: 2px;
+
+  padding: 0 10px;
+  margin: 4px 3px 2px 2px;
+  border-radius: 8px 8px 8px 8px;
+  /* Bordes un poco más cuadrados */
+
+  /* Sombra sólida tipo "Pop Art" */
+  box-shadow: 0px 3px 0px #000000;
 }
 
 
@@ -66,7 +70,7 @@ tooltip label {
 #clock:hover,
 #mpd:hover,
 #custom-media:hover,
-#mpris:hover,  
+#mpris:hover,
 #idle_inhibitor:hover,
 #pulseaudio:hover,
 #network:hover,
@@ -75,54 +79,61 @@ tooltip label {
 #backlight:hover,
 #battery:hover,
 #custom-mpris-prev:hover,
-#custom-mpris-next:hover, 
+#custom-mpris-next:hover,
 #mpris#pause,
 #power-profiles-daemon,
 #custom-power:hover {
-    background-color: #797771; /* Se ilumina a blanco */
-    color: #000000;
-    border-color: #444444;     /* El borde se aclara un poco */
-    /* Hemos quitado 'transform' y 'box-shadow' dinámico para evitar errores */
+  background-color: #797771;
+  /* Se ilumina a blanco */
+  color: #000000;
+  border-color: #444444;
+  /* El borde se aclara un poco */
+  /* Hemos quitado 'transform' y 'box-shadow' dinámico para evitar errores */
 }
 
-#temperature:hover{
-  border-color: #444444;     /* El borde se aclara un poco */
+#temperature:hover {
+  border-color: #444444;
+  /* El borde se aclara un poco */
   background-color: #ffad33;
 }
 
 /* --- AJUSTES ESPECÍFICOS --- */
 
 #workspaces button {
-    padding: 0 5px;
-    color: #9b9995;
+  padding: 0 5px;
+  color: #9b9995;
 }
 
 #workspaces button.active {
-    color: #ebe2cb;
-    background-color: rgba(0,0,0,0.1); /* Sutil fondo oscuro para el activo */
-    border-radius: 4px;
+  color: #ebe2cb;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Sutil fondo oscuro para el activo */
+  border-radius: 4px;
 }
 
 #workspaces button.urgent {
-    color: #eb4d4b;
+  color: #eb4d4b;
 }
 
 
-#pulseaudio-slider{
-   margin-right: 0;
+#pulseaudio-slider {
+  margin-right: 0;
 }
+
 #pulseaudio-slider slider {
   min-height: 0px;
   min-width: 0px;
   background: transparent;
   box-shadow: none;
 }
+
 #pulseaudio-slider trough {
   min-height: 8px;
   min-width: 100px;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 #pulseaudio-slider highlight {
   min-width: 8px;
   min-height: 8px;
@@ -134,29 +145,29 @@ tooltip label {
 /* Quitamos márgenes internos para que parezcan un bloque */
 
 #cpu {
-    margin-right: 0;
-    border-radius: 6px 0 0 6px;
+  margin-right: 0;
+  border-radius: 6px 0 0 6px;
 }
 
 #memory {
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
 }
 
-#pulseaudio{
-    margin-left: 0;
+#pulseaudio {
+  margin-left: 0;
 }
 
-#pulseaudio#microphone{
-    margin-right: 0;
+#pulseaudio#microphone {
+  margin-right: 0;
 }
 
 #temperature {
-    margin-left: 0;
-    border-radius: 0 6px 6px 0;
-    color: #433e33;
-    background-color: #ff9900;
+  margin-left: 0;
+  border-radius: 0 6px 6px 0;
+  color: #433e33;
+  background-color: #ff9900;
 }
 
 
@@ -164,23 +175,25 @@ tooltip label {
 
 /* Botón de apagado invertido */
 #custom-power {
-    background-color: #000000;
-    color: #f1e3bb;
-    border: 2px solid #f1e3bb;
+  background-color: #000000;
+  color: #f1e3bb;
+  border: 2px solid #f1e3bb;
 }
 
 #custom-power:hover {
-    background-color: #333333; /* Gris oscuro al pasar el ratón */
-    color: #ffffff;
+  background-color: #333333;
+  /* Gris oscuro al pasar el ratón */
+  color: #ffffff;
 }
 
 /* Alertas */
-#battery.critical, #temperature.critical {
-    background-color: #eb4d4b;
-    color: #ffffff;
-    border-color: #000000;
+#battery.critical,
+#temperature.critical {
+  background-color: #eb4d4b;
+  color: #ffffff;
+  border-color: #000000;
 }
 
 #battery.warning {
-    background-color: #f0932b;
+  background-color: #f0932b;
 }

@@ -108,11 +108,12 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 alias vim=nvim
+alias vi=nvim
 alias anime="ani-cli -c"
 alias python3=python3.14
 alias python=python3.11
 
-export EDITOR=nvim
+export EDITOR="nvim"
 
 export ANI_CLI_PLAYER=mpv
 export ANI_CLI_QUALITY=best
