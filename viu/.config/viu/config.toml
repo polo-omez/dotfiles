@@ -180,7 +180,7 @@ server = "TOP"
 # Automatically play the next episode when the current one finishes.
 # Type: boolean
 # Default: false
-auto_next = true
+auto_next = false
 
 # Automatically resume playback from the last known episode and position.
 # Type: boolean

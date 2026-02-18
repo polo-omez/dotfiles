@@ -110,8 +110,9 @@ eval "$(tmuxifier init -)"
 alias vim=nvim
 alias vi=nvim
 alias anime="ani-cli -c"
-alias python3=python3.14
-alias python=python3.11
+alias python=python3.14
+alias python11=python3.11
+alias python12=python3.12
 
 export EDITOR="nvim"
 
