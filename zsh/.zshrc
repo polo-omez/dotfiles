@@ -72,6 +72,7 @@ ZSH_THEME="darkblood"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-syntax-highlighting
+  zsh-autosuggestions
   copyfile
   copybuffer
 )
