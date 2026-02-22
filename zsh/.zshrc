@@ -70,7 +70,12 @@ ZSH_THEME="darkblood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  zsh-syntax-highlighting
+  copyfile
+  copybuffer
+)
+
 
 source $ZSH/oh-my-zsh.sh
 

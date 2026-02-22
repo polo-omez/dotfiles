@@ -18,6 +18,8 @@ vim.opt.nu = true -- enable line numbers
 vim.opt.relativenumber = true -- enable relative lines
 vim.opt.scrolloff = 10 -- forzar 10 lineas siempre por debajo del cursor
 vim.opt.updatetime = 300
+vim.opt.ignorecase = true -- ignorecase on vim search
+vim.opt.smartcase = true
 -- Sincronizar portapapeles de sistema con el de nvim
 -- Esto permite que 'y' copie al sistema y 'p' pegue desde él
 vim.opt.clipboard = "unnamedplus"
@@ -44,5 +46,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		vim.api.nvim_set_hl(0, "LspReferenceText", { bg = highlight_color, bold = true })
 		vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = highlight_color, bold = true })
 		vim.api.nvim_set_hl(0, "LspReferenceWrite", { bg = highlight_color, bold = true, underline = true })
+	end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	callback = function()
+		-- 1. 'Search': Es el color de todas las coincidencias encontradas
+		-- bg = fondo, fg = texto
+		vim.api.nvim_set_hl(0, "Search", { bg = "#997937", fg = "black", bold = true })
+
+		-- 2. 'CurSearch' (o IncSearch): Es la coincidencia actual (donde está el cursor)
+		-- Es útil ponerle un color diferente para distinguirla del resto
+		vim.api.nvim_set_hl(0, "CurSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
+		vim.api.nvim_set_hl(0, "IncSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
 	end,
 })
