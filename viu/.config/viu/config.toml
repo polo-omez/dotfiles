@@ -29,7 +29,7 @@ desktop_notification_duration = 300
 # The preferred watch history tracker (local,remote) in cases of conflicts
 # Possible values: [ "local", "remote" ]
 # Default: "local"
-preferred_tracker = "local"
+preferred_tracker = "remote"
 
 # The pygment style to use
 # Possible values: [ "abap", "algol", "algol_nu", "arduino", "autumn", "bw",
