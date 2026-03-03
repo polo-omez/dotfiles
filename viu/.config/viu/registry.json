@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-03-01T17:00:44.240048",
+  "last_updated": "2026-03-02T00:12:44.812133",
   "media_index": {
     "anilist_1575": {
       "media_id": 1575,
@@ -74,9 +74,9 @@
       "media_id": 5114,
       "media_api": "anilist",
       "status": "watching",
-      "progress": "6",
-      "last_watch_position": "00:10:48",
-      "last_watched": "2026-03-01T17:00:44.239967",
+      "progress": "7",
+      "last_watch_position": "00:23:57",
+      "last_watched": "2026-03-02T00:12:44.812044",
       "total_duration": "00:24:29",
       "total_episodes": 0,
       "score": 0.0,
@@ -85,7 +85,7 @@
       "last_notified_episode": null,
       "start_date": "2026-03-01T13:51:48.882598",
       "completed_at": "2026-03-01T13:51:48.882599",
-      "watch_completion_percentage": 44.11164057181756
+      "watch_completion_percentage": 97.8216473791695
     }
   },
   "status_breakdown": {

@@ -19,6 +19,11 @@ return {
 				python = { "pylint" },
 				--lua = { "luacheck" },
 				htmldjango = { "djlint" },
+				javascript = { "eslint" },
+				javascriptreact = { "eslint" },
+				typescript = { "eslint" },
+				typescriptreact = { "eslint" },
+				vue = { "eslint" },
 			}
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,

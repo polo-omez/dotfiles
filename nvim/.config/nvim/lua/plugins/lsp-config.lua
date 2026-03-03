@@ -239,6 +239,7 @@ return {
 
 				cssls = {},
 				ts_ls = {}, --javascript
+				vue_ls = {},
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
@@ -280,6 +281,8 @@ return {
 				"pylint",
 				"djlint",
 				"prettier",
+				"eslint_d",
+				"vue-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
