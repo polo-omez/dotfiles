@@ -132,7 +132,7 @@
   "clock": {
     "format": "  {:%H:%M   %d/%m}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "on-click": "~/.config/scripts/media/toggle_clock.sh",
   },
   "group/computadora": {
     "orientation": "inherit",
