@@ -1,11 +1,16 @@
 #!/bin/bash
 
-if pgrep -f "[c]ava-drop-*" > /dev/null
-then
-    # Si existe, lo matamos
-    pkill -f "[c]ava-drop-*"
+GENERAL_CLASS="[w]aydrop-"
+SPECIFIC_CLASS="[w]aydrop-cava"
+
+if pgrep -f "$SPECIFIC_CLASS" > /dev/null; then
+    
+    pkill -f "$SPECIFIC_CLASS"
+    
 else
-    alacritty --class cava-drop-left -e cava & kitty --class cava-drop-right -e cava
-
+    pkill -f "$GENERAL_CLASS"
+    
+    alacritty --class waydrop-cava-left -e cava & 
+    alacritty --class waydrop-cava-right -e cava &
+    
 fi
-

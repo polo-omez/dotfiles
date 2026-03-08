@@ -1,14 +1,15 @@
 #!/bin/bash
 
 GENERAL_CLASS="[w]aydrop-"
-SPECIFIC_CLASS="[w]aydrop-peaclock"
+SPECIFIC_CLASS="wofi"
 
 if pgrep -f "$SPECIFIC_CLASS" > /dev/null; then
     
+    echo "found a wofi process"
     pkill -f "$SPECIFIC_CLASS"
     
 else
     pkill -f "$GENERAL_CLASS"
     
-    alacritty --class waydrop-peaclock -e peaclock
+    wofi --show drun --matching --insensitive
 fi

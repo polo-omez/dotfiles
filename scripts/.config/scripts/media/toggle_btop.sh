@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GENERAL_CLASS="[w]aydrop-"
-SPECIFIC_CLASS="[w]aydrop-peaclock"
+SPECIFIC_CLASS="[w]aydrop-btop"
 
 if pgrep -f "$SPECIFIC_CLASS" > /dev/null; then
     
@@ -10,5 +10,5 @@ if pgrep -f "$SPECIFIC_CLASS" > /dev/null; then
 else
     pkill -f "$GENERAL_CLASS"
     
-    alacritty --class waydrop-peaclock -e peaclock
+    alacritty --class waydrop-btop -e btop
 fi
