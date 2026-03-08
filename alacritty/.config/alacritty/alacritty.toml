@@ -1,0 +1,72 @@
+[window]
+# Transparencia del fondo (0.1 es invisible, 1.0 es sólido)
+opacity = 0.85
+
+# Ocultar la barra de título y bordes de la ventana
+decorations = "None"
+
+# Alacritty usa padding simétrico (x para izquierda/derecha, y para arriba/abajo).
+# Tu kitty tenía top:0, right:3, bottom:3, left:7. 
+# He hecho una aproximación simétrica.
+padding = { x = 5, y = 1 }
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[cursor]
+# Cursor en forma de bloque y sin parpadeo (blink_interval 0 en kitty)
+style = { shape = "Block", blinking = "Off" }
+
+[bell]
+# Desactiva la campana visual/sonora
+duration = 0
+
+# --- TEMA: Base2Tone Desert Dark ---
+
+[colors.primary]
+background = "#292724"
+foreground = "#ada594"
+
+[colors.cursor]
+cursor = "#bc672f"
+text = "#292724"
+
+[colors.selection]
+text = "#ada594"
+background = "#bc672f"
+
+[colors.normal]
+black   = "#292724" # color0
+red     = "#816f4b" # color1
+green   = "#ec9255" # color2
+yellow  = "#ffb380" # color3
+blue    = "#957e50" # color4
+magenta = "#ec9255" # color5
+cyan    = "#ac8e53" # color6
+white   = "#ada594" # color7
+
+[colors.bright]
+black   = "#7e7767" # color8
+red     = "#f29d63" # color9
+green   = "#3d3a34" # color10
+yellow  = "#615c51" # color11
+blue    = "#908774" # color12
+magenta = "#ddcba6" # color13
+cyan    = "#e58748" # color14
+white   = "#f2ead9" # color15
