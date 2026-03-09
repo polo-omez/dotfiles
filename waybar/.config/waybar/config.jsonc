@@ -166,7 +166,8 @@
     "on-click": "~/.config/scripts/media/toggle_btop.sh"
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% ",
+    "on-click": "~/.config/scripts/media/toggle_centre.sh"
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -242,7 +243,7 @@
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "easyeffects"
   },
   "pulseaudio#microphone": {
 
