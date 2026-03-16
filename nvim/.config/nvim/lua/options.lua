@@ -1,6 +1,6 @@
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=3")
 vim.cmd("set shiftwidth=2")
 
 --Navigate vim panes
@@ -26,6 +26,12 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Eliminar el resaltado
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Seleccionar buffer entero
+vim.keymap.set("n", "<C-a>", "ggVG")
+-- Copiar buffer entero
+vim.keymap.set("n", "yaf", "ggyG")
+vim.keymap.set("v", "af", "<Esc>ggVG")
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
@@ -54,11 +60,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		-- 1. 'Search': Es el color de todas las coincidencias encontradas
 		-- bg = fondo, fg = texto
-		vim.api.nvim_set_hl(0, "Search", { bg = "#997937", fg = "black", bold = true })
+		vim.api.nvim_set_hl(1, "Search", { bg = "#997937", fg = "black", bold = true })
 
-		-- 2. 'CurSearch' (o IncSearch): Es la coincidencia actual (donde está el cursor)
+		-- 3. 'CurSearch' (o IncSearch): Es la coincidencia actual (donde está el cursor)
 		-- Es útil ponerle un color diferente para distinguirla del resto
-		vim.api.nvim_set_hl(0, "CurSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
+		vim.api.nvim_set_hl(1, "CurSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
 		vim.api.nvim_set_hl(0, "IncSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
 	end,
 })
