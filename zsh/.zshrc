@@ -118,11 +118,14 @@ alias anime="viu-media anilist"
 alias python=python3.14
 alias python11=python3.11
 alias python12=python3.12
+alias dnsgoogle="sudo ./.config/scripts/system/change_dns.sh google"
+alias dnscloudflare="sudo ./.config/scripts/system/change_dns.sh cloudflare"
 
 export EDITOR="nvim"
 
 export ANI_CLI_PLAYER=mpv
 export ANI_CLI_QUALITY=best
+
 
 fastfetch
 
