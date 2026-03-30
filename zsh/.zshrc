@@ -71,8 +71,6 @@ ZSH_THEME="darkblood"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  zsh-syntax-highlighting
-  zsh-autosuggestions
   copyfile
   copybuffer
 )
@@ -110,8 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias backup="~/dotfiles/scripts/.config/scripts/dotfiles-backup.sh"
 
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+#export PATH="$HOME/.tmuxifier/bin:$PATH"
+#eval "$(tmuxifier init -)"
 
 alias vi=nvim
 alias anime="viu-media anilist"
