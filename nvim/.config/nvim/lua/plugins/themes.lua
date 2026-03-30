@@ -1,42 +1,51 @@
- return{
-     { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'ellisonleao/gruvbox.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    name="gruvbox",
-    config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      -- Default options:
-      require('gruvbox').setup {
-        terminal_colors = true, -- add neovim terminal colors
-        undercurl = true,
-        underline = true,
-        bold = true,
-        italic = {
-          strings = false,
-          emphasis = true,
-          comments = true,
-          operators = false,
-          folds = true,
-        },
-        strikethrough = true,
-        invert_selection = false,
-        invert_signs = false,
-        invert_tabline = false,
-        inverse = true, -- invert background for search, diffs, statuslines and errors
-        contrast = '', -- can be "hard", "soft" or empty string
-        palette_overrides = {},
-        overrides = {},
-        dim_inactive = false,
-        transparent_mode = false,
-      }
-      vim.cmd 'colorscheme gruvbox'
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-     end,
-    },
-  }
+return {
+	{ -- 1. Gruvbox (Tu tema por defecto)
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		name = "gruvbox",
+		config = function()
+			require("gruvbox").setup({
+				terminal_colors = true,
+				undercurl = true,
+				underline = true,
+				bold = true,
+				italic = {
+					strings = false,
+					emphasis = true,
+					comments = true,
+					operators = false,
+					folds = true,
+				},
+				strikethrough = true,
+				invert_selection = false,
+				invert_signs = false,
+				invert_tabline = false,
+				inverse = true,
+				contrast = "",
+				palette_overrides = {},
+				overrides = {},
+				dim_inactive = false,
+				transparent_mode = false,
+			})
+		end,
+	},
+
+	{ -- 2. Abstract-cs (Disponible para cambiar)
+		"Abstract-IDE/Abstract-cs",
+		lazy = false,
+		priority = 1000,
+	},
+
+	{ -- 3. Cosec Twilight (NUEVO: Disponible para cambiar)
+		"CosecSecCot/cosec-twilight.nvim",
+		lazy = false,
+		priority = 1000,
+		dependencies = {
+			"rktjmp/lush.nvim", -- Añadimos el motor Lush como dependencia
+		},
+
+		config = function()
+			vim.cmd("colorscheme cosec-twilight")
+		end,
+	},
+}

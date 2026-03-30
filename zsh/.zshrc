@@ -125,5 +125,4 @@ export ANI_CLI_PLAYER=mpv
 export ANI_CLI_QUALITY=best
 
 
-fastfetch
 

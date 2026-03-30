@@ -3,13 +3,12 @@
   "position": "top",
   "height": 36, // Un poco más alto para que los bordes redondeados respiren
   "spacing": 6,
-  "output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
+  "output": "eDP-1", // Descomenta esto si quieres forzarla en un monitor específico
 
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
-    "custom/cava",
     "group/media",
     "custom/media",
   ],
@@ -27,7 +26,6 @@
     "backlight",
     "battery",
     "power-profiles-daemon",
-    "custom/orbit",
     "custom/power",
   ],
 

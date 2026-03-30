@@ -68,3 +68,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		vim.api.nvim_set_hl(0, "IncSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
 	end,
 })
+

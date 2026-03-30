@@ -29,7 +29,7 @@ desktop_notification_duration = 300
 # The preferred watch history tracker (local,remote) in cases of conflicts
 # Possible values: [ "local", "remote" ]
 # Default: "local"
-preferred_tracker = "remote"
+preferred_tracker = "local"
 
 # The pygment style to use
 # Possible values: [ "abap", "algol", "algol_nu", "arduino", "autumn", "bw",
@@ -42,7 +42,7 @@ preferred_tracker = "remote"
 # "staroffice", "stata-dark", "stata-light", "tango", "trac", "vim", "vs",
 # "xcode", "zenburn" ]
 # Default: "github-dark"
-pygment_style = "gruvbox-dark"
+pygment_style = "github-dark"
 
 # The spinner to use
 # Possible values: [ "dots", "dots2", "dots3", "dots4", "dots5", "dots6",
@@ -58,7 +58,7 @@ pygment_style = "gruvbox-dark"
 # "shark", "dqpb", "weather", "christmas", "grenade", "point", "layer",
 # "betaWave", "aesthetic" ]
 # Default: "smiley"
-preferred_spinner = "dots8Bit"
+preferred_spinner = "smiley"
 
 # The media database API to use (e.g., 'anilist', 'jikan').
 # Possible values: [ "anilist", "jikan" ]
@@ -91,19 +91,19 @@ icons = true
 
 # Type of preview to display in selectors.
 # Possible values: [ "full", "text", "image", "none" ]
-preview = "full"
+preview = "none"
 
 # Whether to scale up images rendered with icat to fill the preview area. When
 # using the 'full' preview type in a landscape window, enabling this may
 # reduce the amount of text information displayed.
 # Type: boolean
 # Default: false
-preview_scale_up = true
+preview_scale_up = false
 
 # The command-line tool to use for rendering images in the terminal.
 # Possible values: [ "icat", "chafa", "imgcat", "system-sixels", "system-
 # kitty", "system-default" ]
-image_renderer = "system-kitty"
+image_renderer = "chafa"
 
 # The external application to use for viewing manga pages.
 # Possible values: [ "feh", "icat" ]
@@ -124,7 +124,7 @@ show_new_release = true
 # The interval in hours to check for updates
 # Type: float
 # Default: 12
-update_check_interval = 12.0
+update_check_interval = 12
 
 # Enable caching of network requests to speed up subsequent operations.
 # Type: boolean
@@ -149,7 +149,7 @@ discord = false
 # Number of recently watched anime to keep in history.
 # Type: integer (Range: 0-N/A)
 # Default: 50
-recent = 15
+recent = 50
 
 #
 # Stream
@@ -200,7 +200,7 @@ auto_skip = false
 # Percentage of an episode to watch before it's marked as complete.
 # Type: integer (Range: 0-100)
 # Default: 80
-episode_complete_at = 90
+episode_complete_at = 80
 
 # The format selection string for yt-dlp.
 # Type: string
@@ -210,7 +210,7 @@ ytdlp_format = "best[height<=1080]/bestvideo[height<=1080]+bestaudio/best"
 # Prevent updating AniList progress to a lower episode number.
 # Type: boolean
 # Default: true
-force_forward_tracking = false
+force_forward_tracking = true
 
 # Default behavior for tracking progress on AniList.
 # Possible values: [ "track", "disabled", "prompt" ]
@@ -249,7 +249,7 @@ enable_tracking = true
 # Maximum number of concurrent downloads
 # Type: integer (Range: 1-N/A)
 # Default: 3
-max_concurrent_downloads = 5
+max_concurrent_downloads = 3
 
 # Number of retry attempts for failed downloads
 # Type: integer (Range: 0-N/A)
@@ -326,7 +326,7 @@ media_list_sort_by = "MEDIA_POPULARITY_DESC"
 # Preferred language for anime titles from AniList.
 # Possible values: [ "english", "romaji" ]
 # Default: "english"
-preferred_language = "romaji"
+preferred_language = "english"
 
 #
 # Jikan
@@ -435,19 +435,19 @@ preview_separator_color = "208,208,208"
 
 # Path to the main Rofi theme file.
 # Type: path
-theme_main = "/usr/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/main.rasi"
+theme_main = "/home/pbl/.local/share/uv/tools/viu-media/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/main.rasi"
 
 # Path to the Rofi theme file for previews.
 # Type: path
-theme_preview = "/usr/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/preview.rasi"
+theme_preview = "/home/pbl/.local/share/uv/tools/viu-media/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/preview.rasi"
 
 # Path to the Rofi theme file for confirmation prompts.
 # Type: path
-theme_confirm = "/usr/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/confirm.rasi"
+theme_confirm = "/home/pbl/.local/share/uv/tools/viu-media/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/confirm.rasi"
 
 # Path to the Rofi theme file for user input prompts.
 # Type: path
-theme_input = "/usr/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/input.rasi"
+theme_input = "/home/pbl/.local/share/uv/tools/viu-media/lib/python3.14/site-packages/viu_media/assets/defaults/rofi-themes/input.rasi"
 
 #
 # Mpv
@@ -506,7 +506,7 @@ dir = "/home/pbl/.config/viu/.sessions"
 # Enable the background worker for notifications and queued downloads.
 # Type: boolean
 # Default: true
-enabled = false
+enabled = true
 
 # How often to check for new AniList notifications (in minutes).
 # Type: integer (Range: 1-N/A)
