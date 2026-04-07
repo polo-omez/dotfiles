@@ -3,13 +3,13 @@
   "position": "top",
   "height": 34,
   "spacing": 6,
-  "output": "eDP-1", // Descomenta esto si quieres forzarla en un monitor específico
+  "output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
 
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
-    //"custom/cava",
+    "custom/cava",
     "group/media",
     "custom/media",
   ],
@@ -56,6 +56,15 @@
       "16": "󰦸",
       "17": "󰁆",
       "18": "󰦺",
+      "19": "󰧄",
+      "20": "󰁞",
+      "21": "󰧆",
+      "22": "󰁎",
+      "23": "󰁄",
+      "24": "󰁕",
+      "25": "󰦸",
+      "26": "󰁆",
+      "27": "󰦺",
       "default": "◯",
     },
     "sort-by": "number",
