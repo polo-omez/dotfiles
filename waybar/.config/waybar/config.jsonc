@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 36, // Un poco más alto para que los bordes redondeados respiren
+  "height": 34,
   "spacing": 6,
   "output": "eDP-1", // Descomenta esto si quieres forzarla en un monitor específico
 
@@ -9,6 +9,7 @@
     "hyprland/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
+    //"custom/cava",
     "group/media",
     "custom/media",
   ],
@@ -236,7 +237,7 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{volume}% {icon} ",
-    "format-bluetooth": "{volume}% {icon}}",
+    "format-bluetooth": "{volume}% {icon}",
     "format-bluetooth-muted": " {icon}",
     "format-muted": " ",
     "format-icons": {
@@ -266,7 +267,7 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
-    "on-click": "wlogout --protocol layer-shell -b 2"
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh"
   }
 }
 

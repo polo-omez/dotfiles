@@ -37,7 +37,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
-		vim.hl.on_yank()
+		-- Indicamos explícitamente qué grupo de resaltado usar
+		-- El timeout (en milisegundos) define cuánto dura el destello
+		vim.hl.on_yank({ higroup = "YankColor", timeout = 150 })
 	end,
 })
 
@@ -47,7 +49,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		-- Puedes usar nombres de colores ("Red", "Yellow") o códigos Hex ("#3c3836")
 
 		local highlight_color = "#3c3836" -- Un gris oscuro tipo Gruvbox
-		-- local highlight_color = "#45403d" -- Un poco más claro
+		-- local highlight_color = "#000000" -- Un poco más claro
 
 		vim.api.nvim_set_hl(0, "LspReferenceText", { bg = highlight_color, bold = true })
 		vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = highlight_color, bold = true })
@@ -60,12 +62,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		-- 1. 'Search': Es el color de todas las coincidencias encontradas
 		-- bg = fondo, fg = texto
-		vim.api.nvim_set_hl(1, "Search", { bg = "#997937", fg = "black", bold = true })
+		vim.api.nvim_set_hl(1, "Search", { bg = "#efeecd", fg = "black", bold = true })
 
 		-- 3. 'CurSearch' (o IncSearch): Es la coincidencia actual (donde está el cursor)
-		-- Es útil ponerle un color diferente para distinguirla del resto
-		vim.api.nvim_set_hl(1, "CurSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
-		vim.api.nvim_set_hl(0, "IncSearch", { bg = "#f67c1f", fg = "#000000", bold = true })
+		vim.api.nvim_set_hl(1, "CurSearch", { bg = "#efeecd", fg = "#000000", bold = true })
+		vim.api.nvim_set_hl(0, "IncSearch", { bg = "#efeecd", fg = "#000000", bold = true })
+
+		-- NUEVO: Color específico para el destello al copiar (Yank)
+		vim.api.nvim_set_hl(0, "YankColor", { bg = "#efeecd", fg = "#000000", bold = true })
 	end,
 })
-

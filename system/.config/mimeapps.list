@@ -18,6 +18,8 @@ image/gif=com.interversehq.qView.desktop;
 image/webp=com.interversehq.qView.desktop;
 image/bmp=com.interversehq.qView.desktop;
 image/svg+xml=com.interversehq.qView.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;
+application/vnd.efi.iso=org.gnome.FileRoller.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop

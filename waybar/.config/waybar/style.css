@@ -216,11 +216,11 @@ tooltip {
 /* ================================= */
 
 #pulseaudio {
-  color: #f5f4d2;
+  color: #83a598;
 }
 
 #pulseaudio.muted {
-  color: #f5f4d2;
+  color: #fb4934;
 }
 
 /* ================================= */
