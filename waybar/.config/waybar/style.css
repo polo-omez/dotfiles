@@ -43,7 +43,6 @@ window#waybar.hidden {
 
   margin-right: 5px;
   margin-left: 5px;
-  min-width: 30px;
   color: #f5f4d2;
 
   /* background: #282828; */
@@ -218,6 +217,7 @@ tooltip {
 #pulseaudio {
   color: #83a598;
 }
+
 
 #pulseaudio.muted {
   color: #fb4934;
