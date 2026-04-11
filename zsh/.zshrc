@@ -71,6 +71,8 @@ ZSH_THEME="darkblood"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  zsh-syntax-highlighting
+  zsh-autosuggestions
   copyfile
   copybuffer
 )
