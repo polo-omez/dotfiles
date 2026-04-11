@@ -26,6 +26,8 @@ return {
                 center = {
                     -- Usamos 'Telescope find_files' en lugar de LazyVim.pick()
                     { action = 'Telescope find_files',                           desc = " Find File",       icon = " ", key = "f" },
+
+                    { action = 'Yazi',                                           desc = " Explore files",   icon = " ", key = "e" },
                     -- Usamos 'Telescope oldfiles' para archivos recientes
                     { action = 'Telescope oldfiles',                             desc = " Recent Files",    icon = " ", key = "r" },
                     -- Usamos 'Telescope live_grep' para buscar texto
