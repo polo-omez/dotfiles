@@ -6,7 +6,11 @@
   "output": "eDP-1", // Descomenta esto si quieres forzarla en un monitor específico
 
   "modules-left": [
+    //"custom/arrow_left",
+    //"custom/arrow_up",
     "hyprland/workspaces",
+    //"custom/arrow_down",
+    //"custom/arrow_right",
     "hyprland/mode",
     "hyprland/scratchpad",
     //"custom/cava",
@@ -37,7 +41,6 @@
     "all-outputs": true,
     "format": "{icon}", // Quitamos iconos para hacerlo más limpio/minimalista
     "format-icons": {
-       
       "1": "󰧄",
       "2": "󰁞",
       "3": "󰧆",
@@ -268,6 +271,31 @@
     "format": "⏻",
     "tooltip": false,
     "on-click": "~/.config/rofi/powermenu/powermenu.sh"
+  },
+
+  "custom/arrow_left": {
+    "exec": "~/.config/scripts/utils/grid_arrows.sh left",
+    "return-type": "json",
+    "on-click": "hyprctl dispatch hyprtasking:move left",
+    "escape": true
+  },
+  "custom/arrow_up": {
+    "exec": "~/.config/scripts/utils/grid_arrows.sh up",
+    "return-type": "json",
+    "on-click": "hyprctl dispatch hyprtasking:move up",
+    "escape": true
+  },
+  "custom/arrow_down": {
+    "exec": "~/.config/scripts/utils/grid_arrows.sh down",
+    "return-type": "json",
+    "on-click": "hyprctl dispatch hyprtasking:move down",
+    "escape": true
+  },
+  "custom/arrow_right": {
+    "exec": "~/.config/scripts/utils/grid_arrows.sh right",
+    "return-type": "json",
+    "on-click": "hyprctl dispatch hyprtasking:move right",
+    "escape": true
   }
 }
 
