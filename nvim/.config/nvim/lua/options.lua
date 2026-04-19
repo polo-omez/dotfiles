@@ -33,6 +33,15 @@ vim.keymap.set("n", "<C-a>", "ggVG")
 vim.keymap.set("n", "yaf", "ggyG")
 vim.keymap.set("v", "af", "<Esc>ggVG")
 
+-- Activar el resaltado de sintaxis nativo de Neovim 0.12+ para todos los archivos
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*", -- Se aplica a cualquier tipo de archivo que abras
+	callback = function()
+		-- Usamos pcall para evitar errores si abres un archivo cuyo lenguaje no tienes instalado
+		pcall(vim.treesitter.start)
+	end,
+})
+
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
