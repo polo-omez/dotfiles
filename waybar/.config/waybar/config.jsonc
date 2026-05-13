@@ -3,7 +3,7 @@
   "position": "top",
   "height": 34,
   "spacing": 6,
-  "output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
+  //"output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
 
   "modules-left": [
     "hyprland/workspaces",
@@ -33,22 +33,21 @@
   // --- CONFIGURACIÓN DE MÓDULOS ---
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{icon}", // Quitamos iconos para hacerlo más limpio/minimalista
+    "disable-scroll": false,
+    "format": "{name}", // Quitamos iconos para hacerlo más limpio/minimalista
     "format-icons": {
        
-      "1": "󰧄",
-      "2": "󰁞",
-      "3": "󰧆",
-      "4": "󰁎",
-      "5": "󰁄",
-      "6": "󰁕",
-      "7": "󰦸",
-      "8": "󰁆",
-      "9": "󰦺",
-      "10": "󰧄",
-      "11": "󰁞",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "11": ":1",
       "12": "󰧆",
       "13": "󰁎",
       "14": "󰁄",
@@ -65,10 +64,10 @@
       "25": "󰦸",
       "26": "󰁆",
       "27": "󰦺",
-      "default": "◯",
+      "default": "◯"
     },
     "sort-by": "number",
-    "all-outputs": false,
+    "all-outputs":false
   },
   "hyprland/mode": {
     "format": "<span style=\"italic\">{}</span>"

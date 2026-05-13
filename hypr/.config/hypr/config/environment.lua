@@ -1,0 +1,22 @@
+hl.config({
+	env = {
+		"XCURSOR_SIZE," .. cursorSize,
+		"HYPRCURSOR_SIZE," .. cursorSize,
+		"LIBVA_DRIVER_NAME,nvidia",
+		"XDG_SESSION_TYPE,wayland",
+		"GBM_BACKEND,nvidia-drm",
+		"__GLX_VENDOR_LIBRARY_NAME,nvidia",
+		"MOZ_DISABLE_RDD_SANDBOX,1",
+		"NVD_BACKEND,direct",
+		"XCURSOR_THEME," .. cursorTheme,
+		"HYPRCURSOR_THEME," .. cursorTheme,
+		"EDITOR,nvim",
+		"VISUAL,nvim",
+		"ELECTRON_OZONE_PLATFORM_HINT,wayland",
+		"OZONE_PLATFORM,wayland",
+		"MOZ_ENABLE_WAYLAND,1",
+		"XDG_CURRENT_DESKTOP,Hyprland",
+		"XDG_SESSION_DESKTOP,Hyprland",
+		"GDK_BACKEND,wayland,x11",
+	},
+})
