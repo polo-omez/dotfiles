@@ -21,14 +21,14 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.exec_cmd(script .. " movetoworkspace 1
 -- Mover el foco de workspace/monitor (CTRL + ALT)
 hl.bind("CTRL + ALT + H", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace anterior
 hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace siguiente
---hl.bind("CTRL + ALT + J", hl.dsp.exec_cmd(script .. " workspace r-4")) -- Workspace anterior
---hl.bind("CTRL + ALT + K", hl.dsp.exec_cmd(script .. " workspace r+4")) -- Workspace siguiente
+hl.bind("CTRL + ALT + J", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace anterior
+hl.bind("CTRL + ALT + K", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace siguiente
 
 -- Mover ventanas (SUPER + SHIFT)
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS anterior
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
---hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd(script .. " movetoworkspace r-4")) -- Ventana a WS siguiente
---hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd(script .. " movetoworkspace r+4")) -- Ventana a WS siguiente
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS siguiente
 
 -- ==========================================
 -- 3. NAVEGACIÓN EXTRA (Comas, Puntos y Ratón)
