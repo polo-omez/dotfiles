@@ -6,7 +6,7 @@
   //"output": "DP-2", // Descomenta esto si quieres forzarla en un monitor específico
 
   "modules-left": [
-    "hyprland/workspaces",
+    "ext/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
     "custom/cava",
@@ -32,9 +32,10 @@
 
   // --- CONFIGURACIÓN DE MÓDULOS ---
 
-  "hyprland/workspaces": {
+  "ext/workspaces": {
     "disable-scroll": false,
     "format": "{name}", // Quitamos iconos para hacerlo más limpio/minimalista
+    "on-click": "activate",
     "format-icons": {
        
       "1": "1",

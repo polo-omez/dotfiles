@@ -1,4 +1,4 @@
-hl.bind(mainMod .. " + C", hl.dsp.window.kill())
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind("ALT + F4", hl.dsp.window.kill())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
