@@ -124,7 +124,7 @@ show_new_release = true
 # The interval in hours to check for updates
 # Type: float
 # Default: 12
-update_check_interval = 12
+update_check_interval = 12.0
 
 # Enable caching of network requests to speed up subsequent operations.
 # Type: boolean
@@ -537,7 +537,7 @@ auto_download_new_episode = true
 # Also join the discord server
 # where the anime tech community lives :)
 # https://discord.gg/C4rhMA4mmK
-# If you like the project and are able to support it please consider buying me a coffee at https://buymeacoffee.com/benexl.
+# If you like the project and are able to support it please consider buying me a coffee at https://github.com/viu-media/viu.
 # If you would like to connect with me join the discord server from there you can dm for hackathons, or even to tell me a joke 😂
 # Otherwise enjoy your terminal anime browser experience 😁
 #
