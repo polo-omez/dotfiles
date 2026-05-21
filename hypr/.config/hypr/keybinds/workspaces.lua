@@ -11,9 +11,10 @@ for i = 1, 9 do
 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.exec_cmd(script .. " movetoworkspace " .. i))
 end
 
--- El 0 normalmente se usa para el workspace 10
-hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd(script .. " workspace 10"))
-hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.exec_cmd(script .. " movetoworkspace 10"))
+hl.workspace_rule({ workspace = "r[11-18]", monitor = mainMonitor })
+hl.workspace_rule({ workspace = "10", monitor = mainMonitor, default = true })
+hl.workspace_rule({ workspace = "r[2-9]", monitor = secondaryMonitor })
+hl.workspace_rule({ workspace = "1", monitor = secondaryMonitor, default = true })
 
 -- ==========================================
 -- 2. NAVEGACIÓN CON HJKL
