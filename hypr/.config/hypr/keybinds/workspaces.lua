@@ -25,6 +25,8 @@ hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Worksp
 hl.bind("CTRL + ALT + J", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace anterior
 hl.bind("CTRL + ALT + K", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace siguiente
 
+hl.bind("ALT + Tab", hl.dsp.focus({ workspace = "previous_per_monitor" }))
+
 -- Mover ventanas (SUPER + SHIFT)
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS anterior
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
