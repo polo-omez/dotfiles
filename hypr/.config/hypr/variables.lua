@@ -26,8 +26,10 @@ animSpeedFast = 0.5
 noAnim = 0
 animSpeedSlow = 3
 
-opacityActive = 0.975
-opacityInactive = 0.965
+opacityActive = 1
+opacityInactive = 1
+--opacityActive = 0.975
+--opacityInactive = 0.965
 opacityFloat = 0.93
 opacitySpecial = 0.6
 
