@@ -120,6 +120,8 @@ alias python11=python3.11
 alias python12=python3.12
 alias dnsgoogle="sudo ./.config/scripts/system/change_dns.sh google"
 alias dnscloudflare="sudo ./.config/scripts/system/change_dns.sh cloudflare"
+alias solitaire="wine ~/games/MS_Solitaire_Windows_XP/sol.exe"
+alias trackpoint="echo 235 | sudo tee /sys/devices/platform/i8042/serio1/sensitivity"
 
 export EDITOR="nvim"
 

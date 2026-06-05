@@ -83,6 +83,7 @@ tooltip {
 #mpris:hover,
 #idle_inhibitor:hover,
 #pulseaudio:hover,
+#pulseaudio.microphone:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,

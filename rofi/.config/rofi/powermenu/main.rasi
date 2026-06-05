@@ -9,12 +9,12 @@ configuration {
 
 * {
     font: "JetBrains Mono Nerd Font 12";
-    /* Resolution : 1366x768 */
-    box-spacing:                 40px;        /* Un poco más de espacio entre elementos */
-    box-margin:                  400px 300px; /* 400px arriba/abajo, 300px a los lados */
+    Resolution :                 "1920x1200"; 
+    box-spacing:                 40px;
+    box-margin:                  200px 200px;
     message-margin:              0px 200px;
     inputbar-spacing:            0px;
-    list-spacing:                30px;
+    list-spacing:                20px;
     general-padding:             15px;
     element-padding:             40px 8px;
     element-radius:              15px;
@@ -128,7 +128,7 @@ listview {
     lines:                       1;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;

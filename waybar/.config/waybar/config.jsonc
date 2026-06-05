@@ -15,10 +15,10 @@
     "hyprland/scratchpad",
     //"custom/cava",
     "group/media",
-    "custom/media",
+    "custom/media"
   ],
   "modules-center": [
-    "clock",
+    "clock"
   ],
   "modules-right": [
     "mpd",
@@ -31,7 +31,7 @@
     "backlight",
     "battery",
     "power-profiles-daemon",
-    "custom/power",
+    "custom/power"
   ],
 
   // --- CONFIGURACIÓN DE MÓDULOS ---
@@ -59,10 +59,10 @@
       "16": "󰦸",
       "17": "󰁆",
       "18": "󰦺",
-      "default": "◯",
+      "default": "◯"
     },
     "sort-by": "number",
-    "all-outputs": false,
+    "all-outputs": false
   },
   "hyprland/mode": {
     "format": "<span style=\"italic\">{}</span>"
@@ -109,7 +109,7 @@
     "format": "<i>{title}</i>",
     "format-stopped": "   ...   ",
     "player-icons": {
-      "default": "",
+      "default": ""
     },
     "status-icons": {
       "paused": ""
@@ -128,7 +128,7 @@
   }, 
   "mpris#pause": {
     "format-paused": "",
-    "format": "",
+    "format": ""
   }, 
   "group/media": {
     "orientation": "inherit",
@@ -219,7 +219,7 @@
     "format-ethernet": "Wired ",
     "tooltip-format": "{essid} - {ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
+    "format-disconnected": " ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
 
