@@ -1,0 +1,20 @@
+hl.config({
+	env = {
+		"XCURSOR_SIZE," .. cursorSize,
+		"HYPRCURSOR_SIZE," .. cursorSize,
+		"LIBVA_DRIVER_NAME,radeonsi",
+		"XDG_SESSION_TYPE,wayland",
+		"MOZ_DISABLE_RDD_SANDBOX,1",
+		"NVD_BACKEND,direct",
+		"XCURSOR_THEME," .. cursorTheme,
+		"HYPRCURSOR_THEME," .. cursorTheme,
+		"EDITOR,nvim",
+		"VISUAL,nvim",
+		"ELECTRON_OZONE_PLATFORM_HINT,wayland",
+		"OZONE_PLATFORM,wayland",
+		"MOZ_ENABLE_WAYLAND,1",
+		"XDG_CURRENT_DESKTOP,Hyprland",
+		"XDG_SESSION_DESKTOP,Hyprland",
+		"GDK_BACKEND,wayland,x11",
+	},
+})

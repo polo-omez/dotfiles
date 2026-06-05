@@ -1,0 +1,9 @@
+hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
+
+hl.window_rule({
+	name = "fix-xwayland-ghosts",
+	match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
+	no_focus = true,
+})
+
+hl.window_rule({ match = { class = "^$", title = "^$" }, no_blur = true })
