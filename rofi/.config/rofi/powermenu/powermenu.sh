@@ -13,7 +13,6 @@ shutdown='󰐥'
 reboot='󰜉'
 lock=''
 suspend='󰤄'
-hibernate='󰒲'
 yes=''
 no=''
 
@@ -40,7 +39,7 @@ confirm_exit() {
 
 # Show Rofi Menu
 run_rofi() {
-  echo -e "$shutdown\n$reboot\n$lock\n$suspend\n$hibernate" | rofi_cmd
+  echo -e "$shutdown\n$reboot\n$lock\n$suspend" | rofi_cmd
 }
 
 # Execute Commands
@@ -51,7 +50,6 @@ run_cmd() {
     '--shutdown') systemctl poweroff ;;
     '--reboot') systemctl reboot ;;
     '--suspend') systemctl suspend ;;
-    '--hibernate') systemctl hibernate ;;
     esac
   else
     exit 0
@@ -65,5 +63,4 @@ case "$chosen" in
 "$reboot") run_cmd --reboot ;;
 "$lock") sleep 0.5 && hyprlock ;;
 "$suspend") run_cmd --suspend ;;
-"$hibernate") run_cmd --hibernate ;;
 esac

@@ -127,12 +127,12 @@ listview {
     columns:                     5;
     lines:                       1;
     cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   true;
+    dynamic:                     false;
+    scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
-    fixed-columns:               true;
+    fixed-columns:               false;
 
     spacing:                     var(list-spacing);
     margin:                      0px;
