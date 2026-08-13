@@ -9,7 +9,7 @@
     "ext/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
-    "custom/cava",
+    //"custom/cava"),
     "group/media",
     "custom/media",
   ],
