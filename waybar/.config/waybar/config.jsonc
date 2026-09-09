@@ -27,7 +27,7 @@
     "backlight",
     "battery",
     "power-profiles-daemon",
-    "custom/power",
+    "group/actions",
   ],
 
   // --- CONFIGURACIÓN DE MÓDULOS ---
@@ -151,8 +151,8 @@
 
   "clock": {
     "format": "  {:%H:%M   %d/%m}",
-    "tooltip-format": "{:%H:%M:%S}",
-    "on-click": "~/.config/scripts/media/toggle_calendar.sh",
+    "tooltip-format": "{:%H:%M:%S}"
+    /*"on-click": "~/.config/scripts/media/toggle_calendar.sh"*/
   },
   "group/computadora": {
     "orientation": "inherit",
@@ -186,7 +186,7 @@
   },
   "memory": {
     "format": "{}% ",
-    "on-click": "~/.config/scripts/media/toggle_centre.sh"
+    /*"on-click": "~/.config/scripts/media/toggle_centre.sh"*/
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -273,10 +273,41 @@
     "tooltip": false
   },
 
+
+  "group/actions": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 500,
+        "children-class": "actions",
+        "transition-left-to-right": false
+    },
+    "modules": ["custom/power", "custom/reboot", "custom/suspend", "custom/lock"]
+  },
+
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
-    "on-click": "~/.config/rofi/powermenu/powermenu.sh"
+    //"on-click": "~/.config/rofi/powermenu/powermenu.sh"
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh shutdown"
+  },
+
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh reboot"
+  },
+
+  "custom/suspend": {
+    "format": "󰤄",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh suspend"
+  },
+
+  "custom/lock": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh lock"
   }
+
 }
 

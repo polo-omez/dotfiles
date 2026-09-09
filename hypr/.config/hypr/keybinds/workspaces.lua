@@ -11,10 +11,10 @@ for i = 1, 9 do
 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.exec_cmd(script .. " movetoworkspace " .. i))
 end
 
-hl.workspace_rule({ workspace = "r[11-18]", monitor = mainMonitor })
-hl.workspace_rule({ workspace = "10", monitor = mainMonitor, default = true })
-hl.workspace_rule({ workspace = "r[2-9]", monitor = secondaryMonitor })
-hl.workspace_rule({ workspace = "1", monitor = secondaryMonitor, default = true })
+--hl.workspace_rule({ workspace = "r[11-18]", monitor = mainMonitor })
+--hl.workspace_rule({ workspace = "10", monitor = mainMonitor, default = true })
+--jhl.workspace_rule({ workspace = "r[2-9]", monitor = secondaryMonitor })
+--hl.workspace_rule({ workspace = "1", monitor = secondaryMonitor, default = true })
 
 -- ==========================================
 -- 2. NAVEGACIÓN CON HJKL
@@ -49,17 +49,20 @@ hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.window.move({ workspace = "r+1"
 -- ==========================================
 -- 4. PLUGINS (Hyprswitch, Overview, etc.)
 -- ==========================================
-hl.bind(
-	"ALT + Tab",
-	hl.dsp.exec_cmd(
-		"hyprswitch gui --monitors="
-			.. mainMonitor
-			.. " --mod-key alt --key tab --close mod-key-release --reverse-key=mod=shift --sort-recent && hyprswitch dispatch"
-	)
-)
+--hl.bind(
+--	"ALT + Tab",
+--	hl.dsp.exec_cmd(
+--		"hyprswitch gui --monitors="
+--			.. mainMonitor
+--			.. " --mod-key alt --key tab --close mod-key-release --reverse-key=mod=shift --sort-recent && hyprswitch dispatch"
+--	)
+--)
 
 -- Nuevo Overview
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
+--
+
+--[[
 
 -- Submapa antiguo de Hyprtasking (lo mantengo por si aún lo usas como fallback)
 hl.define_submap("overview_mode", function()
@@ -77,3 +80,54 @@ hl.define_submap("overview_mode", function()
 	hl.bind("escape", reset_overview)
 	hl.bind("return", reset_overview)
 end)
+
+hl.bind("SUPER + TAB", function()
+	hl.plugin.hyprtasking.toggle("cursor")
+end)
+
+-- escape closes the overview if it's open
+hl.bind("escape", function()
+	if hl.plugin.hyprtasking.is_active() then
+		hl.plugin.hyprtasking.toggle("all")
+	end
+end, { non_consuming = true })
+
+hl.bind("CTRL + ALT + H", function()
+	hl.plugin.hyprtasking.move("left")
+end)
+hl.bind("CTRL + ALT + J", function()
+	hl.plugin.hyprtasking.move("down")
+end)
+hl.bind("CTRL + ALT + K", function()
+	hl.plugin.hyprtasking.move("up")
+end)
+hl.bind("CTRL + ALT + L", function()
+	hl.plugin.hyprtasking.move("right")
+end)
+
+hl.bind(mainMod .. "+ SHIFT + H", function()
+	hl.plugin.hyprtasking.movewindow("left")
+end)
+hl.bind(mainMod .. "+ SHIFT + J", function()
+	hl.plugin.hyprtasking.movewindow("down")
+end)
+hl.bind(mainMod .. " + SHIFT + K", function()
+	hl.plugin.hyprtasking.movewindow("up")
+end)
+hl.bind(mainMod .. " + SHIFT + L", function()
+	hl.plugin.hyprtasking.movewindow("right")
+end)
+
+hl.bind("SUPER + A", function()
+	hl.plugin.hyprtasking.move("out")
+end)
+hl.bind("SUPER + SHIFT + A", function()
+	hl.plugin.hyprtasking.movewindow("out")
+end)
+
+hl.bind("SUPER + CTRL + 1", function()
+	hl.plugin.hyprtasking.setlayer(1)
+end)
+hl.bind("SUPER + CTRL + 2", function()
+	hl.plugin.hyprtasking.setlayer(2)
+end)]]
