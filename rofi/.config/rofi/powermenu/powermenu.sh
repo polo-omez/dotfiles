@@ -7,6 +7,7 @@ theme='main'
 # Get system info
 uptime="$(uptime -p | sed -e 's/up //g')"
 host="$(cat /proc/sys/kernel/hostname)"
+option=$1
 
 # Icons (Nerd Fonts)
 shutdown='󰐥'
@@ -59,11 +60,21 @@ run_cmd() {
 }
 
 # Handle User Selection
-chosen="$(run_rofi)"
+# chosen="$(run_rofi)"
+#case "$chosen" in
+#"$shutdown") run_cmd --shutdown ;;
+#"$reboot") run_cmd --reboot ;;
+#"$lock") sleep 0.5 && hyprlock ;;
+#"$suspend") run_cmd --suspend ;;
+#"$hibernate") run_cmd --hibernate ;;
+#esac
+
+
+ chosen="$option"
 case "$chosen" in
-"$shutdown") run_cmd --shutdown ;;
-"$reboot") run_cmd --reboot ;;
-"$lock") sleep 0.5 && hyprlock ;;
-"$suspend") run_cmd --suspend ;;
-"$hibernate") run_cmd --hibernate ;;
+"shutdown") run_cmd --shutdown ;;
+"reboot") run_cmd --reboot ;;
+"lock") sleep 0.5 && hyprlock ;;
+"suspend") run_cmd --suspend ;;
+"hibernate") run_cmd --hibernate ;;
 esac

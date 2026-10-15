@@ -15,8 +15,8 @@ cursorSize = 20
 fontFamily = "SF Pro"
 fontMono = "Liga SFMono Nerd Font"
 
-gapsIn = 10
-gapsOut = 10, 20, 20, 20
+gapsIn = 2
+gapsOut = 0
 borderSize = 2
 rounding = 0
 masterRatio = 0.6
@@ -34,5 +34,5 @@ opacityFloat = 0.93
 opacitySpecial = 0.6
 
 -- MONITORS
-mainMonitor = "DP-2"
+mainMonitor = "eDP-1"
 secondaryMonitor = "HDMI-A-1"

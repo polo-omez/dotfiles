@@ -20,18 +20,18 @@ end
 -- 2. NAVEGACIÓN CON HJKL
 -- ==========================================
 -- Mover el foco de workspace/monitor (CTRL + ALT)
-hl.bind("CTRL + ALT + H", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace anterior
-hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace siguiente
-hl.bind("CTRL + ALT + J", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace anterior
-hl.bind("CTRL + ALT + K", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace siguiente
+--hl.bind("CTRL + ALT + H", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace anterior
+--hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace siguiente
+--hl.bind("CTRL + ALT + J", hl.dsp.exec_cmd(script .. " workspace r+1")) -- Workspace anterior
+--hl.bind("CTRL + ALT + K", hl.dsp.exec_cmd(script .. " workspace r-1")) -- Workspace siguiente
 
 hl.bind("ALT + Tab", hl.dsp.focus({ workspace = "previous_per_monitor" }))
 
 -- Mover ventanas (SUPER + SHIFT)
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS anterior
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS siguiente
+--hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS anterior
+--hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
+--hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd(script .. " movetoworkspace r+1")) -- Ventana a WS siguiente
+--hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd(script .. " movetoworkspace r-1")) -- Ventana a WS siguiente
 
 -- ==========================================
 -- 3. NAVEGACIÓN EXTRA (Comas, Puntos y Ratón)
@@ -61,8 +61,6 @@ hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.window.move({ workspace = "r+1"
 -- Nuevo Overview
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 --
-
---[[
 
 -- Submapa antiguo de Hyprtasking (lo mantengo por si aún lo usas como fallback)
 hl.define_submap("overview_mode", function()
@@ -130,4 +128,55 @@ hl.bind("SUPER + CTRL + 1", function()
 end)
 hl.bind("SUPER + CTRL + 2", function()
 	hl.plugin.hyprtasking.setlayer(2)
-end)]]
+end)
+
+hl.config({
+	plugin = {
+		hyprtasking = {
+			layout = "grid",
+
+			gap_size = 10,
+			bg_color = 0xff26233a,
+			border_size = 2,
+			exit_on_hovered = false,
+			warp_on_move_window = 1,
+			close_overview_on_reload = false,
+
+			-- for other mouse buttons see <linux/input-event-codes.h>
+			drag_button = 0x110, -- left mouse button
+			select_button = 0x111, -- right mouse button
+
+			jump = {
+				enabled = false,
+				label_color = 0xffffffff,
+				label_background = 0x000000cc,
+				label_size = 32,
+			},
+
+			gestures = {
+				enabled = true,
+				move_fingers = 3,
+				move_distance = 300,
+				open_fingers = 4,
+				open_distance = 300,
+				open_positive = true,
+			},
+
+			grid = {
+				rows = 3,
+				cols = 3,
+				loop = false,
+				layers = 2,
+				loop_layers = true,
+				gaps_use_aspect_ratio = true,
+			},
+
+			linear = {
+				top = false,
+				height = 400,
+				scroll_speed = 1.0,
+				blur = false,
+			},
+		},
+	},
+})
